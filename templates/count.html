@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1> Há <code>{{count}}</code> palavras no seu texto</h1>
+		
+		<a href="{% url 'home' %}">Start again</a>
+		
+		<h3>Seu texto</h3>
+		<p>{{fulltext}}</p>
+		<br />
+		<h5>Contador:</h5>
+		{% for word, ct in sortedList %}
+		<h6>{{word}} => {{ct}}</h6>
+		{% endfor %}
+
+		<a href="{% url 'about' %}">About</a>
+
+	</body>
+</html>
